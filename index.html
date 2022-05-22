@@ -1,9 +1,8 @@
-
 <html>
     <head>
-      <meta charset="utf-8">
-      <title>进出校模拟</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta charset="utf-8">
+        <title>天津大学进出校模拟</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     </head>
 
     <body>
@@ -47,6 +46,11 @@
         </select>
     </p>
     <p align="center">
+        自定义功能</br>
+            <input type="checkbox" name="checkbox" />隐藏顶部状态栏空白区域</br>
+            <input type="checkbox" name="checkbox" />点击“返回”按钮可全屏
+    </p>
+    <p align="center">
         <button onclick="onclickFun()">确定</button>
     </p>
     <script>
@@ -59,6 +63,22 @@
             localStorage.setItem('mycollege', JSON.stringify(college));
             var id= document.getElementById("myid").value;
             localStorage.setItem('myid', JSON.stringify(id));
+            var check = document.getElementsByName("checkbox");
+            if (check[0].checked == true) {
+                localStorage.setItem('paddingstyle', JSON.stringify("padding-top:0px;"));
+                localStorage.setItem('containerstyle', JSON.stringify("height: calc(100vh - 130px);"));
+            }
+            else{
+                localStorage.setItem('paddingstyle', JSON.stringify(""));
+                localStorage.setItem('containerstyle', JSON.stringify(""));
+            }
+            if (check[1].checked == true) {
+                localStorage.setItem('flag', JSON.stringify(check[1].checked));
+            }
+            else{
+                localStorage.setItem('flag', JSON.stringify(check[1].checked));
+                localStorage.setItem('backhref', JSON.stringify("https://serv.tju.edu.cn/index"));
+            }
             if(document.getElementById("gate").value=="1"){
                 window.location.href='进入东门.html';
             }
