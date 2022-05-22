@@ -56,7 +56,7 @@ function isFull(el) {
 exports.isFull = isFull;
 function toggleFull(el, backgroundColor) {
     if (isFull(el)) {
-        exitFull();
+        document.getElementById("btn_back").setAttribute("href","https://serv.tju.edu.cn/index");
         return false;
     }
     else {
