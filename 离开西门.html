@@ -136,7 +136,7 @@
         <!-- start header 顶部-->
 
 <div class="page-header navbar navbar-fixed-top">
-    <div class="page-header-inner pc_modify_css_setting_theme_color_Skyblue">
+    <div id="exc4" class="page-header-inner pc_modify_css_setting_theme_color_Skyblue" style="padding-top:0px;">
         <!-- logo start -->
         <a id="back-page" class="back-page" href="javascript:void(0)"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
         <!-- logo end -->
@@ -324,7 +324,7 @@
         }
     });
 </script>
-        <div class="page-container"><div style="display: none; justify-content: center; align-items: center;">松开刷新</div>
+        <div id="exc5" class="page-container"><div style="display: none; justify-content: center; align-items: center;">松开刷新</div>
             <script src="./sources/mobile.js.下载"></script>
 <script>
 /************** 移动端首页，配合静态化改造后的修改*************/
@@ -602,9 +602,13 @@ $(function(){
     var myname = JSON.parse(localStorage.getItem('myname'));
     var mycollege = JSON.parse(localStorage.getItem('mycollege'));
     var myid = JSON.parse(localStorage.getItem('myid'));
+    var paddingstyle = JSON.parse(localStorage.getItem('paddingstyle'));
+    var containerstyle = JSON.parse(localStorage.getItem('containerstyle'));
     document.getElementById('exc1').innerHTML = myname+' ('+mycollege+')';
     document.getElementById("exc2").innerHTML = "欢迎你, " + myname;
     document.getElementById('exc3').innerHTML = myid;
+    document.getElementById('exc4').setAttribute('style', paddingstyle);
+    document.getElementById('exc5').setAttribute('style', containerstyle);
     var img = document.getElementById('imghead');
     var img2 = document.getElementById('imghead2');
     img.setAttribute('src', imgUrl);
@@ -673,10 +677,16 @@ $(function(){
         })
     </script>
     <script>
-        var el = document.getElementById('view');
-        document.getElementById('btn_back').addEventListener('click', ev => {
-            exports.toggleFull();
-        });
+        var flag = JSON.parse(localStorage.getItem('flag'));
+        if(flag == true){
+            document.getElementById('btn_back').addEventListener('click', ev => {
+                exports.toggleFull();
+            });
+        }
+        else{
+            var backhref = JSON.parse(localStorage.getItem('backhref'));
+            document.getElementById('btn_back').setAttribute('href', backhref);
+        }
     </script>
 
 </body>
