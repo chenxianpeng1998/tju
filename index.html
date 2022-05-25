@@ -220,6 +220,10 @@
 </div>
 <script>
     var str;//全局变量，用于存储base64字符串
+    document.getElementById('myname').setAttribute('value', JSON.parse(localStorage.getItem('myname')));
+    document.getElementById('mycollege').setAttribute('value', JSON.parse(localStorage.getItem('mycollege')));
+    document.getElementById('myid').setAttribute('value', JSON.parse(localStorage.getItem('myid')));
+    document.getElementById('demo').setAttribute('src', JSON.parse(localStorage.getItem('str')));
     function onclickFun(){
         /*通过id获取元素*/
         var name= document.getElementById("myname").value;
@@ -237,11 +241,8 @@
             localStorage.setItem('paddingstyle', JSON.stringify(""));
             localStorage.setItem('containerstyle', JSON.stringify(""));
         }
-        if (check[1].checked == true) {
-            localStorage.setItem('flag', JSON.stringify(check[1].checked));
-        }
-        else{
-            localStorage.setItem('flag', JSON.stringify(check[1].checked));
+        localStorage.setItem('flag', JSON.stringify(check[1].checked));
+        if (check[1].checked == false) {
             localStorage.setItem('backhref', JSON.stringify("https://serv.tju.edu.cn/index"));
         }
         if(document.getElementById("gate").value=="1"){
