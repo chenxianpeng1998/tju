@@ -55,6 +55,16 @@ ul {
     overflow: hidden;
     padding-top: 0;
 }
+.app__overlay3 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+}
 
 @-webkit-keyframes scanner {
     0% {
@@ -129,7 +139,7 @@ ul {
         </defs>
         <rect x="0" y="0" width="100%" height="100%" style="stroke: none; fill: rgba(0, 0, 0, 0.5); mask: url(#myMask)"></rect>
     </svg>
-    <div style="transform: translateY(850px);">
+    <div class="app__overlay3" style="transform: translateY(680px);">
         <center><font color="white" size="45px">请扫描二维码</font></center>
     </div>
     <script>
