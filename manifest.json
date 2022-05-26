@@ -1,0 +1,36 @@
+{
+    "name": "图筑风暻",
+    "short_name": "图筑风暻",
+    "description": "Nousbuild Website PWA",
+    "categories": [
+        "development",
+        "computer",
+        "code",
+        "architecture",
+        "design",
+        "manga",
+        "science",
+        "blog",
+        "testflight",
+        "paper"
+    ],
+    "icons": [
+        {
+            "src": "https://www.nousbuild.org/pwa/pwa@192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://www.nousbuild.org/pwa/pwa@512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#FFE8E7",
+    "theme_color": "#FFE8E7",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "/",
+    "scope": "/"
+}
+
