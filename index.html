@@ -273,19 +273,19 @@
         }
         if(document.getElementById("gate").value=="1"){
             window.location.href='qrcode.html';
-            localStorage.setItem('whigate', JSON.stringify('east_enter.html'));
+            localStorage.setItem('whigate', 'east_enter.html');
         }
         if(document.getElementById("gate").value=="2"){
             window.location.href='qrcode.html';
-            localStorage.setItem('whigate', JSON.stringify('east_leave.html'));
+            localStorage.setItem('whigate', 'east_leave.html');
         }
         if(document.getElementById("gate").value=="3"){
             window.location.href='qrcode.html';
-            localStorage.setItem('whigate', JSON.stringify('west_enter.html'));
+            localStorage.setItem('whigate', 'west_enter.html');
         }
         if(document.getElementById("gate").value=="4"){
             window.location.href='qrcode.html';
-            localStorage.setItem('whigate', JSON.stringify('west_leave.html'));
+            localStorage.setItem('whigate', 'west_leave.html');
         }
     }
     document.getElementById("upload_file").onchange = function () {
