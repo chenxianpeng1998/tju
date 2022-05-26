@@ -54,6 +54,8 @@ ul {
     height: 100%;
     overflow: hidden;
     padding-top: 0;
+    margin: auto;
+    transition: all .2s ease-in;
 }
 .app__overlay3 {
     position: fixed;
@@ -64,8 +66,13 @@ ul {
     width: 600px;
     height: 600px;
     margin: auto;
+    transition: all .2s ease-in;
 }
-
+.app__overlay4 {
+    position: fixed;
+    margin: auto;
+    transition: all .2s ease-in;
+}
 @-webkit-keyframes scanner {
     0% {
         bottom: 100%
@@ -142,6 +149,9 @@ ul {
     <div class="app__overlay3" style="transform: translateY(680px);">
         <center><font color="white" size="45px">请扫描二维码</font></center>
     </div>
+    <a class="app__overlay4" style="transform: translateY(20px) translateX(20px);text-decoration:none;" href="#" onclick="javascript:history.back(-1);">
+        <font color="white" size="45px">返回</font>
+    </a>
     <script>
         !(function () {
             // 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
