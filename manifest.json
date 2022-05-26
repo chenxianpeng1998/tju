@@ -14,6 +14,12 @@
             "type": "image/png"
         }
     ],
+  
+"plus":{
+    "statusbar": {
+        "immersed": true
+       },
+
   "start_url": "https://chenxianpeng1998.github.io/tju/",
   "display": "standalone"
 }
