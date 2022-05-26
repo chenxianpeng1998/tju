@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- saved from url=(0125)https://serv.tju.edu.cn/verifyqr/access?code=Yk0yemRFMTQwTTRUZmxiZmRNZVU2QjRBZE0yVGZVOTQxT2FEM1FleDNNOVQ3azZ4Nk5jZzg9YT02N2Rh -->
 <html class="mdl-js"><head><link rel="manifest" href="./manifest.json">
-<meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="application-name" content="进出校模拟">
 <meta name="apple-mobile-web-app-title" content="进出校模拟">
 <meta name="msapplication-starturl" content="https://chenxianpeng1998.github.io/tju/">
-<meta name="theme-color" content="#014473" />
+<meta name="theme-color" content="#2196F3" />
     <script type="text/javascript">
         if (navigator.serviceWorker != null) {
             navigator.serviceWorker.register('./sw.js')
@@ -272,16 +272,16 @@
             localStorage.setItem('backhref', JSON.stringify("https://serv.tju.edu.cn/index"));
         }
         if(document.getElementById("gate").value=="1"){
-            window.location.href='进入东门.html';
+            window.location.href='east_enter.html';
         }
         if(document.getElementById("gate").value=="2"){
-            window.location.href='离开东门.html';
+            window.location.href='east_leave.html';
         }
         if(document.getElementById("gate").value=="3"){
-            window.location.href='进入西门.html';
+            window.location.href='west_enter.html';
         }
         if(document.getElementById("gate").value=="4"){
-            window.location.href='离开西门.html';
+            window.location.href='west_leave.html';
         }
     }
     document.getElementById("upload_file").onchange = function () {
