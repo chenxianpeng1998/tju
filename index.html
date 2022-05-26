@@ -235,10 +235,18 @@
 </div>
 <script>
     var str;//全局变量，用于存储base64字符串
-    document.getElementById('myname').setAttribute('value', JSON.parse(localStorage.getItem('myname')));
-    document.getElementById('mycollege').setAttribute('value', JSON.parse(localStorage.getItem('mycollege')));
-    document.getElementById('myid').setAttribute('value', JSON.parse(localStorage.getItem('myid')));
-    document.getElementById('demo').setAttribute('src', JSON.parse(localStorage.getItem('str')));
+    if(JSON.parse(localStorage.getItem('myname')!=null)){
+        document.getElementById('myname').setAttribute('value', JSON.parse(localStorage.getItem('myname')));
+    }
+    if(JSON.parse(localStorage.getItem('mycollege')!=null)){
+        document.getElementById('mycollege').setAttribute('value', JSON.parse(localStorage.getItem('mycollege')));
+    }
+    if(JSON.parse(localStorage.getItem('myid')!=null)){
+        document.getElementById('myid').setAttribute('value', JSON.parse(localStorage.getItem('myid')));
+    }
+    if(JSON.parse(localStorage.getItem('str')!=null)){
+        document.getElementById('demo').setAttribute('src', JSON.parse(localStorage.getItem('str')));
+    }
     function onclickFun(){
         /*通过id获取元素*/
         var name= document.getElementById("myname").value;
