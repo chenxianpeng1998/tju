@@ -272,16 +272,20 @@
             localStorage.setItem('backhref', JSON.stringify("https://serv.tju.edu.cn/index"));
         }
         if(document.getElementById("gate").value=="1"){
-            window.location.href='east_enter.html';
+            window.location.href='qrcode.html';
+            localStorage.setItem('whigate', JSON.stringify('east_enter.html'));
         }
         if(document.getElementById("gate").value=="2"){
-            window.location.href='east_leave.html';
+            window.location.href='qrcode.html';
+            localStorage.setItem('whigate', JSON.stringify('east_leave.html'));
         }
         if(document.getElementById("gate").value=="3"){
-            window.location.href='west_enter.html';
+            window.location.href='qrcode.html';
+            localStorage.setItem('whigate', JSON.stringify('west_enter.html'));
         }
         if(document.getElementById("gate").value=="4"){
-            window.location.href='west_leave.html';
+            window.location.href='qrcode.html';
+            localStorage.setItem('whigate', JSON.stringify('west_leave.html'));
         }
     }
     document.getElementById("upload_file").onchange = function () {
