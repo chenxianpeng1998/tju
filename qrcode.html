@@ -206,9 +206,8 @@ ul {
                     let data = canvas.toDataURL('image/webp');
                     qrcode.decode(data);
                     qrcode.callback = function (imgMsg) {
-                        alert(imgMsg);
                         if (imgMsg != 'error decoding QR Code') {
-                            window.location.href = JSON.parse(localStorage.getItem('whigate'));
+                            window.location.href = imgMsg;
                         };
                     };
                 };
