@@ -42,7 +42,7 @@ ul {
     margin: auto;
     background: linear-gradient(#2196F3, #2196F3) left top, linear-gradient(#2196F3, #2196F3) left top, linear-gradient(#2196F3, #2196F3) right top, linear-gradient(#2196F3, #2196F3) right top, linear-gradient(#2196F3, #2196F3) right bottom, linear-gradient(#2196F3, #2196F3) right bottom, linear-gradient(#2196F3, #2196F3) left bottom, linear-gradient(#2196F3, #2196F3) left bottom;
     background-repeat: no-repeat;
-    background-size: 5px 50px, 50px 5px
+    background-size: 7px 70px, 70px 7px
 }
 .app__overlay2 {
     position: fixed;
@@ -55,8 +55,6 @@ ul {
     overflow: hidden;
     padding-top: 0;
 }
-
-
 
 @-webkit-keyframes scanner {
     0% {
@@ -100,7 +98,7 @@ ul {
 }
 .custom-scanner {
     width: 500px;
-    height: 5px;
+    height: 7px;
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 00%, #2196f3 50%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
     -webkit-transition: all .2s linear;
@@ -131,6 +129,9 @@ ul {
         </defs>
         <rect x="0" y="0" width="100%" height="100%" style="stroke: none; fill: rgba(0, 0, 0, 0.5); mask: url(#myMask)"></rect>
     </svg>
+    <div style="transform: translateY(850px);">
+        <center><font color="white" size="45px">请扫描二维码</font></center>
+    </div>
     <script>
         !(function () {
             // 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
@@ -188,7 +189,8 @@ ul {
                     qrcode.decode(data);
                     qrcode.callback = function (imgMsg) {
                         if (imgMsg != 'error decoding QR Code') {
-                            window.location.href = imgMsg
+                            window.location.href = imgMsg;
+                            alert(imgMsg);
                         };
                     };
                 };
