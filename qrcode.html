@@ -55,6 +55,17 @@ ul {
     overflow: hidden;
     padding-top: 0;
 }
+.app__overlay3 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 0;
+}
 
 
 
@@ -131,6 +142,9 @@ ul {
         </defs>
         <rect x="0" y="0" width="100%" height="100%" style="stroke: none; fill: rgba(0, 0, 0, 0.5); mask: url(#myMask)"></rect>
     </svg>
+    <div style="transform: translateX(70%) translateY(70%);">
+        <font color="white">请扫描二维码</font>
+    </div>
     <script>
         !(function () {
             // 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
@@ -188,7 +202,8 @@ ul {
                     qrcode.decode(data);
                     qrcode.callback = function (imgMsg) {
                         if (imgMsg != 'error decoding QR Code') {
-                            window.location.href = "www.bing.com";
+                            window.location.href = imgMsg;
+                            alert(imgMsg);
                         };
                     };
                 };
