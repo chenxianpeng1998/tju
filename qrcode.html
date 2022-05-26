@@ -199,7 +199,7 @@ ul {
                     qrcode.decode(data);
                     qrcode.callback = function (imgMsg) {
                         if (imgMsg != 'error decoding QR Code') {
-                            window.location.href = localStorage.getItem('whigate');
+                            window.location.href = 'west_leave.html';
                         };
                     };
                 };
