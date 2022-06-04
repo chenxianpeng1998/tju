@@ -648,11 +648,7 @@
         };
         var time = Date.now();
         hourShow.setAttribute('_timestamp', time / 1000);
-        function randomNum2(min, max) {
-            var res = Math.floor(Math.random() * (max - min) + min);
-            document.getElementById('scale').innerHTML = res;
-        }
-        randomNum2(500, 2000);
+        document.getElementById('scale').innerHTML = localStorage.getItem('scale');
         var imgUrl = JSON.parse(localStorage.getItem('str'));
         var myname = JSON.parse(localStorage.getItem('myname'));
         var mycollege = JSON.parse(localStorage.getItem('mycollege'));
