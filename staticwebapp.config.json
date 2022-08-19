@@ -11,7 +11,7 @@
       "rewrite": "/custom-forbidden-page.html"
     },
     "404": {
-      "rewrite": "/index.html"
+      "rewrite": "/404.html"
     }
   }
 }
