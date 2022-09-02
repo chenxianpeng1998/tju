@@ -978,7 +978,7 @@
         var myname = JSON.parse(localStorage.getItem('myname'));
         var paddingstyle = JSON.parse(localStorage.getItem('paddingstyle'));
         var containerstyle = JSON.parse(localStorage.getItem('containerstyle'));
-        document.getElementById("exc2").innerHTML = localStorage.getItem('whigate');
+        document.getElementById("exc2").innerHTML = "欢迎你, " + myname;
         var img = document.getElementById('imghead');
         img.setAttribute('src', imgUrl);
         document.getElementById('exc4').setAttribute('style', paddingstyle);
