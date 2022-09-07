@@ -724,13 +724,13 @@
                     (mon < 10 ? '0' + mon : mon) + '月' +
                     (date < 10 ? '0' + date : date) + '日'
                 )
-                $hourShow.text(
+                $hourShow.html(
                     [
                         (hour < 10 ? '0' + hour : hour),
-                        (min < 10 ? '0' + min : min),
-                        (sec < 10 ? '0' + sec : sec)
+                        (min < 10 ? '0' + min : min)
                     ].join(':') +
-                    '.' + (curMillion / 100).toString()
+                    ':' + "<span style='color:blue;font-size:40px;font-weight:bolder'>"+(sec < 10 ? '0' + sec : sec).toString()+ '<span>'
+                    + '.' + "<span style='color:red;font-size:50px;font-weight:bolder'>" + (curMillion / 100).toString()+"</span>"
                 )
             }, 100);
             (function (div_id) {
