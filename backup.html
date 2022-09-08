@@ -150,11 +150,23 @@
         var _TD_HOST = 'serv.tju.edu.cn';
     </script>
     <script src="./sources/head.js"></script>
-    <style>
-        hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__ {
-            border: 1px dotted
-        }
-    </style>
+	<style>
+		input:-webkit-autofill {
+			transition: background-color 5000s ease-in-out 0s;
+		}
+		input:focus
+		{ 
+			outline: 0;
+			border: 1px solid #2196f3;
+			box-shadow: 0px 0px 10px 0px #2196f3;
+		}
+		select:focus
+		{ 
+			outline: 0;
+			border: 1px solid #2196f3;
+			box-shadow: 0px 0px 10px 0px #2196f3;
+		}
+	</style>
 </head>
 
 <body
@@ -163,7 +175,7 @@
         <!-- start header 顶部-->
         <div class="page-header navbar navbar-fixed-top">
             <div class="page-header-inner pc_modify_css_setting_theme_color_Skyblue">
-                <div align="center" style="padding-top:15px;padding-bottom:12px;"><a href="index.html" style="text-decoration:none;font-weight:bold"><img src="./sources/天大.png" height="30px" />
+                <div align="center" style="padding-top:15px;padding-bottom:12px;"><a href="index.html" style="text-decoration:none;font-weight:bold"><img src="./sources/tju.png" height="30px" />
                     <font color='#005288' size='4'> 天津大学进出校模拟</font></a>
                 </div>
             </div>
@@ -172,73 +184,69 @@
             <div style="display: none; justify-content: center; align-items: center;">松开刷新</div>
             <script src="./sources/mobile.js"></script>
             <div class="page-content-wrapper">
+										<img src="./sources/footer.png" style="width:100%;position: absolute;bottom: 0">
                 <div class="page-content">
-                    <div class="title-image">
-                        <img src="./sources/access.jpg">
-                    </div>
                     <div class="qr-content row">
                         <div class="col-12">
                             <div class="card-box" style="">
                                 <div class="card-body">
                                     <div class="card" style="margin-bottom:0;">
                                         <div class="card-body code-box"
-                                            style="background-color: rgba(126, 173, 117, 0.8);">
-                                            <div class="text-center r1" style="padding-left:15px; padding-right:15px">
-                                                <p align="center">
-                                                    <img id="demo"
-                                                        style="object-fit:cover;width:135px;height:180px;display:inline-block;"
-                                                        src="data:image/jpeg;base64,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">
-                                                </p>
-                                                <p align="center">
-                                                    请上传您的证件照：
-                                                </p>
-                                                <p align="center">
-                                                    <input accept="image/*" name="upimage" id="upload_file" type="file">
-                                                </p>
-                                                <p align="center">
-                                                    请输入您的姓名：
-                                                </p>
-                                                <p align="center">
-                                                    <input type="text" value="" id="myname">
-                                                </p>
-                                                <p align="center">
-                                                    请输入您的学院（请写全称）：
-                                                </p>
-                                                <p align="center">
-                                                    <input type="text" value="" id="mycollege">
-                                                </p>
-                                                <p align="center">
-                                                    请输入您的学号：
-                                                </p>
-                                                <p align="center">
-                                                    <input type="text" value="" id="myid">
-                                                </p>
-                                                <p align="center">
-                                                    请选择您要通过的校门：
-                                                </p>
-                                                <p align="center">
-                                                    <select id="gate">
+                                            style="background-color: rgb(126, 179, 241);">
+                                            <div class="text-center r1" style="padding-left:15px; padding-right:15px;background-color: rgb(126, 179, 241);">
+												<div align="center" style="padding-bottom: 10px;">
+														<img id="demo" style="object-fit:cover;width:135px;height:180px;display:inline-block;" src="data:image/jpeg;base64,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">
+												</div>
+												<div class="r">
+												<div class="b">
+													<span class="a">您的证件照：</span>
+                                                    <span class="c">
+														<input accept="image/*" name="upimage" id="upload_file" type="file" style="width:100%;display:none">
+														<button type="button" class="btn btn-primary" id="select_file" onclick="upload_file.click();" style="width:100%;padding:5px;margin-top:2px;margin-bottom: 2px;">
+															<i class="fa fa-upload"></i> 点击上传
+														</button>
+													</span>
+												</div>
+                                                <div class="b"><span class="a">
+                                                    您的姓名：
+                                                </span><span class="c">
+                                                    <input type="text" value="" id="myname" style="width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
+                                                </span></div>
+                                                <div class="b"><span class="a">
+                                                    您的学院全称：
+                                                </span><span class="c">
+                                                    <input type="text" value="" id="mycollege" style="width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
+                                                </span></div>
+                                                <div class="b"><span class="a">
+                                                    您的学号：
+                                                </span><span class="c">
+                                                    <input type="text" value="" id="myid" style="width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
+                                                </span></div>
+                                                <div class="b"><span class="a">
+                                                    您的通行方式：
+                                                </span><span class="c">
+                                                    <select id="gate" style="width:100%;height:100%;border:none;background-color: rgba(255, 255, 255, 0.5)">
                                                         <option value="1">进入东门</option>
                                                         <option value="2">离开东门</option>
                                                         <option value="3">进入西门</option>
                                                         <option value="4">离开西门</option>
                                                     </select>
-                                                </p>
-                                                <p align="center">
-                                                    自定义功能</br>
-                                                    <input type="checkbox" name="checkbox" />隐藏顶部状态栏空白区域</br>
-                                                    <input type="checkbox" name="checkbox" />点击“返回”按钮可全屏
-                                                </p>
+                                                </span></div>
+												</div>
+												<p align="center" style="display: none;">
+												    自定义功能</br>
+												    <input type="checkbox" name="checkbox" />隐藏顶部状态栏空白区域</br>
+												    <input type="checkbox" name="checkbox" />点击“返回”按钮可全屏
+												</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary" id="btn_back" style="width: 100%; border-radius: 30px;"
+                        <a class="btn btn-primary" style="width: 100%; border-radius: 30px; margin-left:15px; margin-right:15px;"
                             onclick="onclickFun()">扫码进入</a>
-                        <a class="btn btn-primary" id="btn_back"
-                            style="width: 100%; border-radius: 30px; margin-top:10px"
+                        <a class="btn btn-primary" style="width: 100%; border-radius: 30px; margin-left:15px; margin-right:15px; margin-top:10px"
                             onclick="onclickFun2()">直接进入</a>
                     </div>
                 </div>
@@ -259,7 +267,23 @@
                     </font>
                 </center>
             </div>
-        </div>
+		</div>
+		<script>
+			function plusReady(){
+			}
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener('plusready', plusReady, false);
+			}
+			function AICopen() {
+				plus.webview.create('https://space.bilibili.com/1473830/','AIC',{
+				backButtonAutoControl:'close',
+				scalable:false
+			});
+				plus.webview.show('AIC');
+			}
+		</script>
         <script>
             var str;//全局变量，用于存储base64字符串
             if (JSON.parse(localStorage.getItem('myname') != null)) {
@@ -315,7 +339,7 @@
                     window.location.href = 'main.html';
                     localStorage.setItem('whigate', 'west_leave.html');
                 }
-                alert("使用方法：点击主页下方“扫一扫”按钮，扫描任意二维码即可进入验证界面。");
+				alert("使用方法：点击主页下方“扫一扫”按钮，扫描任意二维码即可进入验证界面。");
             }
             document.getElementById("upload_file").onchange = function () {
                 var str = gen_base64();
