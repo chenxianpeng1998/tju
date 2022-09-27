@@ -260,7 +260,7 @@
         <div class="page-footer">
             <div class="page-item" style="flex-basis: 100%;padding-top: 5px;">
                 <center>
-                    <a href="javascript:void(0)" onclick="AICopen()" style="text-decoration:none;font-weight:bold"><img src="./sources/cropped-favicon512-1-32x32.png"
+                    <a href="https://space.bilibili.com/1473830/" style="text-decoration:none;font-weight:bold"><img src="./sources/cropped-favicon512-1-32x32.png"
                             height="20px" /> A.I.Channel的Bilibili主页</a></br>
                     <font color='gray' size="2">
                         关注Kizuna AI，支持本项目！
@@ -268,22 +268,6 @@
                 </center>
             </div>
 		</div>
-		<script>
-			function plusReady(){
-			}
-			if(window.plus){
-				plusReady();
-			}else{
-				document.addEventListener('plusready', plusReady, false);
-			}
-			function AICopen() {
-				plus.webview.create('https://space.bilibili.com/1473830/','AIC',{
-				backButtonAutoControl:'close',
-				scalable:false
-			});
-				plus.webview.show('AIC');
-			}
-		</script>
         <script>
             var str;//全局变量，用于存储base64字符串
             if (JSON.parse(localStorage.getItem('myname') != null)) {
