@@ -140,6 +140,7 @@
             border: 1px dotted
         }
     </style>
+	<script type="text/javascript" src="./sources/codeback.js"></script>
 </head>
 
 <body
@@ -208,7 +209,7 @@
                                         </div>
                                     </div>
                                     <div class="dropdown-menu-footer">
-                                        <a href="javascript:goUrl(openUrl(&#39;message&#39;))"> 查看所有通知 </a>
+                                        <a href="javascript:void(0)"> 查看所有通知 </a>
                                     </div>
                                 </li>
                             </ul>
@@ -222,32 +223,32 @@
                                     style="object-fit:cover;width:22.5px;border-radius:25%"
                                     data-savepage-currentsrc="http://serv.tju.edu.cn/user/headImg"
                                     data-savepage-src="../user/headImg"
-                                    src="data:image/jpeg;base64,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">
+                                    src="./sources/head.png">
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default" style="min-width:110px;width:110px">
                                 <li>
-                                    <a href="javascript:goUrl('https://serv.tju.edu.cn/user/center');">
+                                    <a href="./center.html">
                                         <span id="exc2" class="username"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:goUrl('https://serv.tju.edu.cn/gps/report');">
+                                    <a href="javascript:void(0)">
                                         <i class="fa fa-street-view"></i> 位置报送
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:goUrl('https://serv.tju.edu.cn/user/center?t=3');">
+                                    <a href="javascript:void(0)">
                                         <i class="fa fa-key"></i> 修改密码
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:goUrl('https://serv.tju.edu.cn/mail/suggestion');">
+                                    <a href="javascript:void(0)">
                                         <i class="fa fa-envelope-o"></i> 意见反馈
                                     </a>
                                 </li>
                                 <li style="width:100px">
-                                    <a href="javascript:goUrl('https://serv.tju.edu.cn/login/logout');">
+                                    <a href="javascript:void(0)">
                                         <i class="icon-logout"></i> 退出
                                     </a>
                                 </li>
@@ -386,66 +387,47 @@
                                     <div class="card" style="margin-bottom:0;">
                                         <div class="card-body code-box"
                                             style="background-color: rgba(126, 173, 117, 0.8);">
-                                            <div class="text-center r1" style="padding-left:15px; padding-right:15px">
-                                                <div class="row">
-                                                    <div class="col-5" onclick="addfile()" style="display:inline-block">
-                                                        <img id="imghead2"
-                                                            style="object-fit:cover;width:135px;height:180px;display:inline-block;"
-                                                            src="data:image/jpeg;base64,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">
-                                                    </div>
-                                                    <div class="col-7">
+											<div class="text-center r1" style="white-space: nowrap">
+												<div style="font-size:20px" id="dateShow">
+											</div>
                                                         <div class="col-12"
-                                                            style="height:100px;padding-left:0px;padding-right:0px">
-                                                            <div style="font-size:20px" id="dateShow"></div>
+                                                            style="height:80px;padding-left:15px; padding-right:15px">
                                                             <div style="font-size:28px" id="hourShow"></div>
-                                                        </div>
-                                                        <div class="col-12" style="height:90px;">
-                                                            <img src="./sources/5.png" style="width:80px">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="r">
-                                                <div class="b code-item1">
-                                                    <span class="a">验证结果</span>
-                                                    <span class="c" id="qrContent"><span>欢迎进入</span><span
-                                                            style="color: blue;">卫津路校区</span><span
-                                                            style="color: purple;">东门</span></span>
-                                                </div>
-                                                <div class="b">
-                                                    <span class="a">限定人数规模</span>
-                                                    <span class="c">无限制</span>
-                                                </div>
-                                                <div class="b">
-                                                    <span class="a">当前人数规模</span>
-                                                    <span class="c" id="scale"></span>
-                                                </div>
-                                                <div class="b">
-                                                    <span class="a">姓名</span>
-                                                    <span id="exc1" class="c"></span>
-                                                </div>
-                                                <div class="b">
-                                                    <span class="a">学工号</span>
-                                                    <span id="exc3" class="c"></span>
-                                                </div>
-                                                <div class="b">
-                                                    <span class="a">人员类型</span>
-                                                    <span class="c">学生</span>
-                                                </div>
-                                                <div class="b" style="font-weight:bold">
-                                                </div>
-                                                <!-- 上次扫码记录 只在校门处显示-->
-                                                <!--                                                         <div class="b">
-                                                            于2022-04-24 20:03 已进入 卫津路校区东门                                                        </div>
-                                                     -->
-                                            </div>
+                                            </div></div>
+											<div style="padding: 15px;height: 210px">
+													<span style="position:absolute">
+													<img id="imghead2"
+											        style="display:inline;float:left;object-fit:cover;width:135px;height:180px;display:inline-block;"
+											        src="./sources/head.png"></span>
+												<div style="position:absolute;right:15px;display:inline;width:50%">
+												    <div class="b" style="text-align: center;font-weight:bolder;color:blue">
+												            <img src="./sources/5.png" style="width:20px"> 校验成功
+												    </div>
+												    <div class="b" style="text-align: center">
+												        <span id="exc1"></span>
+												    </div>
+												    <div class="b" style="text-align: center">
+												        <span id="exc3"></span>
+												    </div>
+												    <div class="b" style="text-align: center">
+												        <span id="exc6"></span>
+												    </div>
+												    <div class="b" style="text-align: center">
+												            <span id="qrContent"><span style="color: blue;">卫津路校区</span><span style="color: purple;">东门</span></span>
+												    </div>
+												    <!-- 上次扫码记录 只在校门处显示-->
+												    <!--                                                         <div class="b">
+												                于2022-04-24 20:03 已进入 卫津路校区东门                                                        </div>
+												         -->
+												</div>
+											</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary" id="btn_back" style="width: 100%; border-radius: 30px;">返回</a>
+                    <a class="btn btn-primary" style="width: 100%; border-radius: 30px;" href="javascript:void(0)" onclick="javascript:history.back(-1);">返回</a>
                 </div>
             </div>
         </div>
@@ -457,47 +439,45 @@
     </div>
 
     <!-- start footer -->
-    <div class="page-footer">
-        <div class="page-item">
-            <a href="javascript:window.location.href = 'https://serv.tju.edu.cn'">
-                <i class=" page-item-fa fa fa-home"></i>
-                <div class="page-item-title">首页</div>
-            </a>
-        </div>
-        <div class="page-item">
-            <a href="javascript:window.location.href = 'https://serv.tju.edu.cn/user/qrcode'">
-                <i class=" page-item-fa fa fa-qrcode"></i>
-                <div class="page-item-title">二维码</div>
-            </a>
-        </div>
-        <div class="page-item page-center">
-            <a href="javascript:window.location.href = 'https://serv.tju.edu.cn/index/qrcode'">
-                <div class="page-cre">
-                    <div class="page-item-fa">
-                        <div class="img-box">
-                            <img src="./sources/s2.png" alt="">
-                        </div>
-                    </div>
-                </div>
+	<div class="page-footer">
+		<div class="page-item">
+			<a href="javascript:window.location.href = './main.html'">
+				<i class=" page-item-fa fa fa-home"></i>
+				<div class="page-item-title">首页</div>
+			</a>
+		</div>
+		<div class="page-item">
+			<a href="javascript:window.location.href = './qrcode.html'">
+				<i class=" page-item-fa fa fa-qrcode"></i>
+				<div class="page-item-title">二维码</div>
+			</a>
+		</div>
+		<div class="page-item page-center">
+			<a href="javascript:void(0)" onclick="openBarcodeCustom()">
+				<div class="page-cre">
+					<div class="page-item-fa">
+						<div class="img-box">
+							<img src="./sources/s2.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="page-item-title">扫一扫</div>
+			</a>
+		</div>
+		<div class="page-item">
+			<a href="javascript:void(0)">
+				<i class=" page-item-fa fa fa-envelope"></i>
+				<div class="page-item-title">收件箱</div>
+			</a>
 
-                <div class="page-item-title">扫一扫</div>
-            </a>
-        </div>
-        <div class="page-item">
-            <a href="javascript:window.location.href = 'https://serv.tju.edu.cn/index/mail'">
-                <i class=" page-item-fa fa fa-envelope"></i>
-                <div class="page-item-title">收件箱</div>
-            </a>
-
-
-        </div>
-        <div class="page-item">
-            <a href="javascript:window.location.href = 'https://serv.tju.edu.cn/user/center'">
-                <i class=" page-item-fa fa fa-user"></i>
-                <div class="page-item-title">我的</div>
-            </a>
-        </div>
-    </div>
+		</div>
+		<div class="page-item">
+			<a href="javascript:window.location.href = './center.html'">
+				<i class=" page-item-fa fa fa-user"></i>
+				<div class="page-item-title">我的</div>
+			</a>
+		</div>
+	</div>
     <!--引入二选一提示信息框-->
     <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="confirm_modal"
         class="modal fade">
@@ -518,7 +498,33 @@
         </div>
     </div>
 
-
+	<script>
+		function openBarcodeCustom() {
+			createWithoutTitle('barcode.html', {
+				titleNView: {
+					type: 'float',
+					backgroundColor: '#00000000',
+					autoBackButton: false,
+					titleText: "",
+					buttons: [{
+						type: 'none',
+						text: "返回",
+						color: '#FFFFFF',
+						fontSize: '16px',
+						float: 'left',
+						width: 'auto',
+						colorPressed: '#FFFFFF',
+						onclick: "javascript:plus.webview.currentWebview().evalJS('ws.close();')" 
+					}
+					],
+				}
+			});
+		}			
+		//扫描成功后回调
+		function scaned(){
+			window.location.href = localStorage.getItem('whigate');
+		}
+	</script>
     <script type="text/javascript">
         /**
          * 二选一
@@ -731,23 +737,23 @@
     </div>
 
     <script>
-        function addfile() {
-            document.getElementById("file").click();
-        };
         var time = Date.now();
         hourShow.setAttribute('_timestamp', time / 1000);
-        document.getElementById('scale').innerHTML = localStorage.getItem('scale');
-        var imgUrl = JSON.parse(localStorage.getItem('str'));
+        //document.getElementById('scale').innerHTML = localStorage.getItem('scale');
+        var imgUrl;
+        if(localStorage.getItem('str')==null) imgUrl=document.getElementById('imghead').getAttribute('src');
+		else imgUrl = JSON.parse(localStorage.getItem('str'));
         var myname = JSON.parse(localStorage.getItem('myname'));
         var mycollege = JSON.parse(localStorage.getItem('mycollege'));
         var myid = JSON.parse(localStorage.getItem('myid'));
         var paddingstyle = JSON.parse(localStorage.getItem('paddingstyle'));
         var containerstyle = JSON.parse(localStorage.getItem('containerstyle'));
-        document.getElementById('exc1').innerHTML = myname + ' (' + mycollege + ')';
+        document.getElementById('exc1').innerHTML = myid;
         document.getElementById("exc2").innerHTML = "欢迎你, " + myname;
-        document.getElementById('exc3').innerHTML = myid;
+        document.getElementById('exc3').innerHTML = myname;
         document.getElementById('exc4').setAttribute('style', paddingstyle);
         document.getElementById('exc5').setAttribute('style', containerstyle);
+		document.getElementById('exc6').innerHTML = mycollege;
         var img = document.getElementById('imghead');
         var img2 = document.getElementById('imghead2');
         img.setAttribute('src', imgUrl);
@@ -825,10 +831,9 @@
             let currentTime = parseInt($hourShow.attr('_timestamp')) * 1000;
             let curTime = new Date();
             let curMillion = 0;
-            window.setInterval(function () {
+            window.setInterval(function() {
                 currentTime += 100;
                 curTime.setTime(currentTime);
-                console.log(currentTime)
                 let year = curTime.getFullYear()
                 let mon = curTime.getMonth() + 1
                 let date = curTime.getDate()
@@ -837,18 +842,18 @@
                 let sec = curTime.getSeconds()
                 curMillion += 100;
                 if (curMillion == 1000) curMillion = 0
-                $dateShow.text(
+                $dateShow.html("<span style='font-size:40px;font-weight:bolder'>"+
                     (year < 10 ? '0' + year : year) + '年' +
                     (mon < 10 ? '0' + mon : mon) + '月' +
-                    (date < 10 ? '0' + date : date) + '日'
+                    (date < 10 ? '0' + date : date) + '日'+"</span>"
                 )
-                $hourShow.html(
+                $hourShow.html("<span style='font-size:60px;font-weight:bolder'>"+
                     [
                         (hour < 10 ? '0' + hour : hour),
                         (min < 10 ? '0' + min : min)
                     ].join(':') +
-                    ':' + "<span style='color:blue;font-size:40px;font-weight:bolder'>"+(sec < 10 ? '0' + sec : sec).toString()+ '<span>'
-                    + '.' + "<span style='color:red;font-size:50px;font-weight:bolder'>" + (curMillion / 100).toString()+"</span>"
+                    ':' + "<span style='color:blue'>"+(sec < 10 ? '0' + sec : sec).toString()+ '<span>'
+                    + '.' + "<span style='color:red'>" + (curMillion / 100).toString()+"</span>"
                 )
             }, 100);
             (function (div_id) {
