@@ -387,40 +387,40 @@
                                     <div class="card" style="margin-bottom:0;">
                                         <div class="card-body code-box"
                                             style="background-color: rgba(126, 173, 117, 0.8);">
-											<div class="text-center r1" style="white-space: nowrap">
-												<div style="font-size:20px" id="dateShow">
-											</div>
+                                            <div class="text-center r1" style="white-space: nowrap">
+                                            	<div style="font-size:20px" id="dateShow">
+                                            </div>
                                                         <div class="col-12"
                                                             style="height:80px;padding-left:15px; padding-right:15px">
                                                             <div style="font-size:28px" id="hourShow"></div>
                                             </div></div>
-											<div style="padding: 15px;height: 210px">
-													<span style="position:absolute">
-													<img id="imghead2"
-											        style="display:inline;float:left;object-fit:cover;width:135px;height:180px;display:inline-block;"
-											        src="./sources/head.png"></span>
-												<div style="position:absolute;right:15px;display:inline;width:50%">
-												    <div class="b" style="text-align: center;font-weight:bolder;color:blue">
-												            <img src="./sources/5.png" style="width:20px"> 校验成功
-												    </div>
-												    <div class="b" style="text-align: center">
-												        <span id="exc1"></span>
-												    </div>
-												    <div class="b" style="text-align: center">
-												        <span id="exc3"></span>
-												    </div>
-												    <div class="b" style="text-align: center">
-												        <span id="exc6"></span>
-												    </div>
-												    <div class="b" style="text-align: center">
-												            <span id="qrContent"><span style="color: blue;">卫津路校区</span><span style="color: purple;">西门</span></span>
-												    </div>
-												    <!-- 上次扫码记录 只在校门处显示-->
-												    <!--                                                         <div class="b">
-												                于2022-04-24 20:03 已进入 卫津路校区西门                                                        </div>
-												         -->
-												</div>
-											</div>
+                                            <div style="padding: 15px;height: 210px">
+                                            		<span style="position:absolute">
+                                            		<img id="imghead2"
+                                                    style="display:inline;float:left;object-fit:cover;width:135px;height:180px;display:inline-block;"
+                                                    src="./sources/head.png"></span>
+                                            	<div style="position:absolute;right:15px;display:inline;width:50%">
+                                            	    <div class="b" style="text-align: center;font-weight:bolder;color:blue">
+                                            	            <img src="./sources/5.png" style="width:20px"> 校验成功
+                                            	    </div>
+                                            	    <div class="b" style="text-align: center">
+                                            	        <span id="exc1"></span>
+                                            	    </div>
+                                            	    <div class="b" style="text-align: center">
+                                            	        <span id="exc3"></span>
+                                            	    </div>
+                                            	    <div class="b" style="text-align: center">
+                                            	        <span id="exc6"></span>
+                                            	    </div>
+                                            	    <div class="b" style="text-align: center">
+                                            	            <span id="qrContent"><span style="color: blue;">卫津路校区</span><span style="color: purple;">西门</span></span>
+                                            	    </div>
+                                            	    <!-- 上次扫码记录 只在校门处显示-->
+                                            	    <!--                                                         <div class="b">
+                                            	                于2022-04-24 20:03 已进入 卫津路校区西门                                                        </div>
+                                            	         -->
+                                            	</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -581,60 +581,6 @@
 
         }
     </script>
-    <script>
-// $(".page-bar").remove();
-    </script>
-
-    <style>
-        .modal.left .modal-dialog,
-        .modal.right .modal-dialog {
-            position: fixed;
-            margin: auto;
-            width: 320px;
-            height: 100%;
-            -webkit-transform: translate3d(0%, 0, 0);
-            -ms-transform: translate3d(0%, 0, 0);
-            -o-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0);
-        }
-
-        .modal.left .modal-content,
-        .modal.right .modal-content {
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .modal.left .modal-body,
-        .modal.right .modal-body {
-            /* padding: 15px 15px 80px; */
-        }
-
-        /*Left*/
-        .modal.left.fade .modal-dialog {
-            left: -320px;
-            -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-            transition: opacity 0.3s linear, left 0.3s ease-out;
-        }
-
-        .modal.left.fade.in .modal-dialog {
-            left: 0;
-        }
-
-        /*Right*/
-        .modal.right.fade .modal-dialog {
-            right: -320px;
-            -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-            transition: opacity 0.3s linear, right 0.3s ease-out;
-        }
-
-        .modal.right.fade.in .modal-dialog {
-            right: 0;
-        }
-    </style>
     <!-- 弹窗 -->
     <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="common-select"
         class="modal right fade">
@@ -703,40 +649,6 @@
     <script src="./sources/tableExtend.js"></script>
     <script src="./sources/List.js"></script>
 
-    <div class="modal fade" id="phy_login" tabindex="-1" role="dialog" aria-labelledby="phy_login_Label">
-        <div class="modal-dialog" role="document" style="max-width:800px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="phy_login_Label">物化帐号登录</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-horizontal">
-                        <div class="form-group row">
-                            <label class="control-label col-md-3">帐号ID： <span class="required"> * </span> </label>
-                            <div class="col-md-7">
-                                <input type="text" class="form-control" name="phy_id" spellcheck="false"
-                                    data-ms-editor="true">
-
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-3">密码： <span class="required"> * </span> </label>
-                            <div class="col-md-7">
-                                <input type="password" class="form-control" name="phy_password">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"
-                        id="btn_close_phy_login">关闭</button>
-                    <button type="button" class="btn btn-info" id="btn_save_phy_login">登录</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         var time = Date.now();
         hourShow.setAttribute('_timestamp', time / 1000);
@@ -760,68 +672,38 @@
         img.setAttribute('src', imgUrl);
         img2.setAttribute('src', imgUrl);
     </script>
-    <script>
-        function openUrl(path, params, root_path) {
-            let _url = '';
-            if (typeof root_path != 'undefined' && root_path != '') {
-                _url = root_path + '/' + path
-                if (_url.search(/^http(s|):\/\/\S*?\//) == -1) {
-                    _url = window.location.protocol + '//' + _url
-                }
-            } else {
-                _url = _APP_URL_ROOT + '/' + path
-            }
-            var _p = '';
-            var _i = 0;
-            $.each(params, function (i, e) {
-                if (_i == 0) {
-                    if (_HTTP_REWRITE == '1') {
-                        _p += '?';
-                    } else {
-                        _p += '&';
-                    }
-                } else {
-                    _p += '&';
-                }
-                _p += i + '=' + e;
-                _i++;
-            });
-            _url = _url + _p;
-            return _url;
-        }
-        function PhyCode() {
-            $("#phy_login").unbind("show.bs.modal").on("show.bs.modal", function () {
-                $(this).find("#btn_save_phy_login").unbind("click").click(function () {
-                    var _id = $("input[name=phy_id]").val();
-                    var _pwd = $("input[name=phy_password]").val();
-                    if (_id == '' || _pwd == '') {
-                        Toast('帐号ID或密码不能为空！', 2, 'mid-center', '错误');
-                        return false;
-                    }
-                    window.location.replace(openUrl('welcome/sweep'));
-                    // $.ajax({
-                    //     type : 'post',
-                    //     url : openUrl(''),
-                    //     dataType : 'jsonp',
-                    //     data:{"id":_id,'password':_pwd},
-                    //     success:function(e){
-
-                    //     },
-                    //     error:function(){
-                    // 	    Toast('信息异常！',2,'mid-center','失败');
-                    //     }
-                    // })
-                })
-            }).modal();
-        }
-    </script>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="leave_modal"
+        class="modal fade">
+        <div class="modal-dialog" role="document" style="top:35%;">
+            <div class="modal-content" style="border-radius:4px;">
+                <div class="modal-header" style="padding:10px;">
+                    <h4 class="modal-title" id="myModalLabel" style="margin-top:0px;">销假数据填写</h4>
+                </div>
+                <div class="modal-body" style="min-height: 85px;">
+                    <div class="form-group row"> <label class="col-md-4 control-label">实际开始时间</label>
+                        <div class="col-md-12"> <input size="30" type="text" value="" id="actual_start_time" readonly=""
+                                class="form-control form_datetime_one"> </div>
+                    </div>
+                    <div class="form-group row"> <label class="col-md-4 control-label">实际结束时间</label>
+                        <div class="col-md-12"> <input size="30" type="text" value="" id="actual_end_time" readonly=""
+                                class="form-control form_datetime_two"> </div>
+                    </div>
+                    <div class="form-group"> <label for="record">请输入您的销假意见:</label> <textarea id="record" name="record"
+                            class="form-control" rows="3" spellcheck="false" data-ms-editor="true"></textarea> </div>
+                </div>
+                <div class="modal-footer" style="padding-top: 0px;"> <button type="button" data-dismiss="modal"
+                        class="btn btn-primary leave-confirm">确认</button> <button type="button" data-dismiss="modal"
+                        class="btn btn-secondary leave-cancel">取消</button> </div>
+            </div>
+        </div>
+    </div>
     <script>
         window.UPLOAD_URL = "../upload"
         window.CHECK_STATUS = "1"
-        window.CHECK_TITLE = "欢迎进入卫津路校区西门"
+        window.CHECK_TITLE = "您已离开天津大学，再见！"
         window.HEALTH_CODE = "0";
         window.NAME = "卫津路校区西门";
-        window.ACTION = "1";
+        window.ACTION = "2";
     </script>
     <script src="./sources/code.js"></script>
     <script>
@@ -875,7 +757,6 @@
                 })
             })('qrContent');
         })
-    </script>
     </script>
     <script>
         var flag = JSON.parse(localStorage.getItem('flag'));
