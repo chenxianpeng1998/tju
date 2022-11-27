@@ -64,7 +64,6 @@
             cursor: pointer;
         }
     </style>
-	<script type="text/javascript" src="./sources/codeback.js"></script></head>
 
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
     <div class="page-wrapper">
@@ -127,7 +126,7 @@
 
                 <li class="dropdown dropdown-user n-h" id="header_user_bar">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                        <img class="img-circle" id="imghead" style="object-fit:cover;width:22.5px;border-radius:25%" src="./sources/head.png">
+                        <img class="img-circle" id="imghead" style="object-fit:cover;width:unset;border-radius:25%" src="./sources/head.png">
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default" style="min-width:110px;width:110px">
@@ -310,7 +309,7 @@ $(function(){
                                         <div class="profile-userpic">
                                             <!-- <img src="#" class="img-responsive" alt="" id="user_img"> -->
                                             <div class="up-img-cover" id="up-img-touch">
-                                                <img alt="点击图片上传" src="./sources/head.png" id="user_img" style="object-fit:cover;width:135px;height:180px;display:inline-block;border:0;border-radius:0%;">
+                                                <img alt="点击图片上传" src="./sources/head.png" id="user_img" style="border:0;border-radius:0%;">
                                             </div>
                                             <!-- <code>头像暂不能修改</code> -->
                                             <div><a style="text-align: center; display: block;" id="pic"></a></div>
@@ -723,6 +722,10 @@ $(function(){
 	document.getElementById('exc5').setAttribute('style', containerstyle);
 	var img = document.getElementById('imghead');
 	var img2 = document.getElementById('user_img');
+	if (JSON.parse(localStorage.getItem('cut'))==true){
+		img.setAttribute('style', "object-fit:cover;width:21px;border-radius:25%");
+		img2.setAttribute('style', "object-fit:cover;height:180px;border:0;border-radius:0%");
+	}
 	img.setAttribute('src', imgUrl);
 	img2.setAttribute('src', imgUrl);
 </script>
