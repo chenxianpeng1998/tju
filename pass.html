@@ -79,9 +79,6 @@
     <link href="./sources/access_b2d104fbde64d2f91a3e39766c8a67da.css" rel="stylesheet" type="text/css">
     <script src="./sources/jquery.min.js"></script>
     <script src="./sources/jquery.qrcode.min.js"></script>
-    <script>
-        var exports = {}
-    </script>
     <script src="./sources/fullscreen.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="font-src &#39;self&#39; b.yzcdn.cn data:">
@@ -135,8 +132,7 @@
         var _TD_HOST = 'serv.tju.edu.cn';
     </script>
 	<link href="./sources/spec_20da.css" rel="stylesheet">
-    <script src="./sources/head.js">
-	<script type="text/javascript" src="./sources/codeback.js"></script>
+    <script src="./sources/head.js"></script>
 </head>
 
 <body
@@ -216,7 +212,7 @@
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                 data-close-others="true">
                                 <img id="imghead" class="img-circle"
-                                    style="object-fit:cover;width:22.5px;border-radius:25%"
+                                    style="object-fit:cover;width:unset;border-radius:25%"
                                     data-savepage-currentsrc="http://serv.tju.edu.cn/user/headImg"
                                     data-savepage-src="../user/headImg"
                                     src="./sources/head.png">
@@ -383,43 +379,46 @@
                                     <div class="card" style="margin-bottom:0;">
                                         <div class="card-body code-box"
                                             style="background-color: rgba(126, 173, 117, 0.8);">
-                                            <div class="text-center r1" style="white-space: nowrap">
-                                            	<div style="font-size:20px" id="dateShow">
-                                            </div>
-                                                        <div class="col-12"
-                                                            style="height:80px;padding-left:15px; padding-right:15px">
-                                                            <div style="font-size:28px" id="hourShow"></div>
-                                            </div></div>
-                                            <div style="padding: 15px;height: 210px">
-                                            		<span style="position:absolute">
-                                            		<img id="imghead2"
-                                                    style="display:inline;float:left;object-fit:cover;width:135px;height:180px;display:inline-block;"
-                                                    src="./sources/head.png"></span>
-                                            	<div style="position:absolute;right:15px;display:inline;width:50%">
-                                            	    <div class="b" style="text-align: center;font-weight:bolder;color:blue">
-                                            	            <img src="./sources/5.png" style="width:20px"> 校验成功
-                                            	    </div>
-                                            	    <div class="b" style="text-align: center">
-                                            	        <span id="exc1"></span>
-                                            	    </div>
-                                            	    <div class="b" style="text-align: center">
-                                            	        <span id="exc3"></span>
-                                            	    </div>
-                                            	    <div class="b" style="text-align: center">
-                                            	        <span id="exc6"></span>
-                                            	    </div>
-                                            	    <div class="b" style="text-align: center">
-                                            	            <span id="qrContent"></span>
-                                            	    </div>
-                                            	</div>
-                                            </div>
+                                            <div class="text-center r1" style="padding-left:15px; padding-right:15px">
+                                                                                                    <div class="row">
+                                                                                                      <div class="col-12" style="padding-left:0px;padding-right:0px;padding-top: 10px;">
+                                                                                                        <div style="font-size:40px;display: inline-block;font-weight:bolder;line-height: 46px;overflow: visible;white-space: nowrap;text-align: center;" id="dateShow"></div>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                    <div class="row" style="text-align: center;">
+                                                                                                      <div class="col-12" style="">
+                                                                                                        <div style="font-size: 64px;font-family: Arial, Helvetica, sans-serif;font-weight:bolder;overflow: visible;white-space: nowrap;text-align: center;" id="hourShow" _timestamp=""></div>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                      <div class="col-5">
+                                                                                                        <img id="imghead2"
+                                                                                                style="height:180px"
+                                                                                                src="./sources/head.png">
+                                                                                                      </div>
+                                                                                                      <div class="col-7">
+                                                                                                        <div class="col-12" style="height:100px;padding-left:0px;padding-right:0px">
+                                                                                                          <div class="b" style="color:blue;font-weight:bold;">
+                                                                                                            <img src="./sources/5.png" style="width: 22px;display: inline-block;margin-top: -3px;padding-right: 3px;">
+                                                                                                            校验成功
+                                                                                                          </div>
+                                                                                                          <div class="b"><span id="exc1"></span></div>
+                                                                                                          <div class="b"><span id="exc3"></span></div>
+                                                                                                                                                                              <div class="b"><span id="exc6"></span></div>
+                                                                                                                                                                          <div class="b" id="qrContent"><span id="qrContent"></span></div>
+                                                                                                        </div>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                                                                                                                                                          </div>
+                                                                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+							<a class="btn btn-primary" style="width: 100%; border-radius: 30px;" href="javascript:void(0)" id="btn_back" onclick="javascript:history.back(-1);">返回</a>
                         </div>
                     </div>
-                    <a class="btn btn-primary" style="width: 100%; border-radius: 30px;" href="javascript:void(0)" onclick="javascript:history.back(-1);">返回</a>
                 </div>
             </div>
         </div>
@@ -489,6 +488,7 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript">
         /**
          * 二选一
@@ -632,6 +632,10 @@
 		document.getElementById('exc6').innerHTML = mycollege;
         var img = document.getElementById('imghead');
         var img2 = document.getElementById('imghead2');
+		if (JSON.parse(localStorage.getItem('cut'))==true){
+			img.setAttribute('style', "object-fit:cover;width:21px;border-radius:25%");
+			img2.setAttribute('style', "object-fit:cover;width:130px;height:180px");
+		}
         img.setAttribute('src', imgUrl);
         img2.setAttribute('src', imgUrl);
     </script>
@@ -697,12 +701,12 @@
                 let sec = curTime.getSeconds()
                 curMillion += 100;
                 if (curMillion == 1000) curMillion = 0
-                $dateShow.html("<span style='font-size:40px;font-weight:bolder'>"+
+                $dateShow.html(
                     (year < 10 ? '0' + year : year) + '年' +
                     (mon < 10 ? '0' + mon : mon) + '月' +
-                    (date < 10 ? '0' + date : date) + '日'+"</span>"
+                    (date < 10 ? '0' + date : date) + '日'
                 )
-                $hourShow.html("<span style='font-size:60px;font-weight:bolder'>"+
+                $hourShow.html(
                     [
                         (hour < 10 ? '0' + hour : hour),
                         (min < 10 ? '0' + min : min)
@@ -713,7 +717,7 @@
             }, 100);
         })
     </script>
-    <script>
+    <!--<script>
         var flag = JSON.parse(localStorage.getItem('flag'));
         if (flag == true) {
             document.getElementById('btn_back').addEventListener('click', ev => {
@@ -724,7 +728,7 @@
             var backhref = JSON.parse(localStorage.getItem('backhref'));
             document.getElementById('btn_back').setAttribute('href', backhref);
         }
-    </script>
+    </script>-->
 
 </body>
 
