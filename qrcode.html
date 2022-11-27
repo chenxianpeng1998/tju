@@ -56,7 +56,6 @@
 <script src="./sources/head.js"></script>
 	<link rel="stylesheet" href="./sources/td.css">
 	<link rel="stylesheet" href="./sources/common.css">
-	<script type="text/javascript" src="./sources/codeback.js"></script>
 </head>
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
 	<div class="page-wrapper">
@@ -119,7 +118,7 @@
 
                 <li class="dropdown dropdown-user n-h" id="header_user_bar">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                        <img class="img-circle" id="imghead" style="object-fit:cover;width:22.5px;border-radius:25%" src="./sources/head.png">
+                        <img class="img-circle" id="imghead" style="object-fit:cover;width:unset;border-radius:25%" src="./sources/head.png">
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default" style="min-width:110px;width:110px">
@@ -383,6 +382,9 @@ $(function(){
 	document.getElementById('exc4').setAttribute('style', paddingstyle);
 	document.getElementById('exc5').setAttribute('style', containerstyle);
 	var img = document.getElementById('imghead');
+	if (JSON.parse(localStorage.getItem('cut'))==true){
+		img.setAttribute('style', "object-fit:cover;width:21px;border-radius:25%");
+	}
 	img.setAttribute('src', imgUrl);
 </script>
 <script type="text/javascript">
