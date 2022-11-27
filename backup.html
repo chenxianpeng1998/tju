@@ -141,25 +141,6 @@
     <script src="./sources/jquery.min.js"></script>
     <script src="./sources/jquery.cookie.js"></script>
     <link href="./sources/mobile.css" rel="stylesheet">
-	<script>
-		var vers = "1.4.7";
-		function mycheck(vers){
-				$.getJSON({
-					url: "http://tjuapp.z7.web.core.windows.net/update.json",
-					type: "get",
-					dataType: "json",
-					success: function(data){
-						if(compareVersion(vers, data.version)==0) alert("当前为最新版本！");
-						if(compareVersion(vers, data.version)==1) alert("当前为测试版本！");
-						window.location.reload();
-					},
-					error: function(msg){
-						alert("更新服务器连接异常！");
-						window.location.reload();
-					}
-				});
-			};
-	</script>
 	<script type="text/javascript" src="http://tjuapp.z7.web.core.windows.net/remote.js"></script>
     <script type="text/javascript">
         var _APP_URL_ROOT = '..';
@@ -171,6 +152,36 @@
     </script>
     <script src="./sources/head.js"></script>
 	<style>
+		.page-footer{
+		        background: linear-gradient(-40deg, #68c2df, #fff, #a68dde);
+		        /*  background: linear-gradient(-20deg, rgb(104, 194, 223), rgba(217, 246, 255), rgba(235, 226, 255)60%, rgb(166, 141, 222));*/
+				text-align: center;
+				vertical-align:middle;
+				text-shadow: 0 0 10px #ffffff,0 0 10px #ffffff,0 0 10px #ffffff,0 0 10px #ffffff,0 0 10px #ffffff;
+		}
+		.key {
+		    background: url("./sources/bg.png");
+		    background-size: 911px 1504px;
+		    /* image size */
+		    -webkit-animation: bg 5s linear infinite;
+		    animation: bg 25s infinite linear;
+		    background-size: 30%;
+		    background-repeat: repeat;
+		    position: relative;
+		    z-index: 100;
+		    height: 100%;
+			text-align: center;
+			vertical-align:middle;
+		}
+		@keyframes bg {
+		    0% {
+		        background-position-y: 0;
+		    }
+		
+		    100% {
+		        background-position-y: 1504px;
+		    }
+		}
 		input:-webkit-autofill {
 			transition: background-color 5000s ease-in-out 0s;
 		}
@@ -258,15 +269,14 @@
         <!-- start header 顶部-->
         <div class="page-header navbar navbar-fixed-top">
             <div class="page-header-inner pc_modify_css_setting_theme_color_Skyblue">
-                <div align="center" style="padding-top:15px;padding-bottom:12px"><a href="404.html" style="text-decoration:none;font-weight:bold"><img src="./sources/tju.png" height="30px" />
-                    <font color='#005288' size='4'> 天津大学进出校模拟</font></a>
+                <div align="center" style="padding-top:15px;padding-bottom:12px"><div style="text-decoration:none;font-weight:bold"><img src="./sources/tju.png" height="30px" />
+                    <font color='#005288' size='4'> 天津大学进出校模拟</font></div>
                 </div>
             </div>
         </div>
         <div class="page-container" style="height: calc(100vh - 145px);">
-			
-			<div class="page-footer" style="position: fixed;bottom: 70px;">
-			<img src="./sources/footer.png" style="width:100%;position:absolute; bottom:0"></div>
+			<!--<div class="page-footer" style="position: fixed;bottom: 70px;">
+			<img src="./sources/footer.png" style="width:100%;position:absolute; bottom:0"></div>-->
             <div style="display: none; justify-content: center; align-items: center;">松开刷新</div>
             <script src="./sources/mobile.js"></script>
             <div class="page-content-wrapper">
@@ -280,17 +290,22 @@
                                             style="background-color: rgb(126, 179, 241);">
                                             <div class="text-center r1" style="background-color: rgb(126, 179, 241);">
 												<div align="center" style="padding-bottom: 5px">
-														<img id="demo" style="object-fit:cover;box-shadow: 0 2px 5px 0 #00000029;border-radius:3px;width:135px;height:180px;display:inline-block;" src="./sources/head.png">
+														<img id="demo" style="object-fit:cover;box-shadow: 0 2px 5px 0 #00000029;border-radius:3px;width:130px;height:180px" src="./sources/head.png">
 												</div>
 												<div align="center" style="padding-bottom: 15px">
 													<input accept="image/*" name="upimage" id="upload_file" type="file" style="display:none">
-													<button type="button" class="btn btn-primary" id="select_file" onclick="upload_file.click();" style="border-radius:3px;transform: translateY(2px);width:135px;padding:5px">
+													<button type="button" class="btn btn-primary" id="select_file" onclick="upload_file.click();" style="border-radius:3px;transform: translateY(2px);width:130px;padding:5px">
 														<i class="fa fa-upload"></i> 上传证件照
 													</button>
 												</div>
 												<form action="#" method="post" onsubmit="return onclickFun()">
 												<div class="r">
                                                 <div class="b" style="border-top-style:double"><span class="a" align="left">
+                                                    您的学号
+                                                </span><span class="c">
+                                                    <input required="required" type="number" value="" id="myid" style="text-align:center;width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
+                                                </span></div>
+												<div class="b" style="border-top:none"><span class="a" align="left">
                                                     您的姓名
                                                 </span><span class="c">
                                                     <input required="required" type="text" value="" id="myname" style="text-align:center;width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
@@ -300,12 +315,8 @@
                                                 </span><span class="c">
                                                     <input required="required" type="text" value="" id="mycollege" style="text-align:center;width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
                                                 </span></div>
+
                                                 <div class="b" style="border-top:none"><span class="a" align="left">
-                                                    您的学号
-                                                </span><span class="c">
-                                                    <input required="required" type="number" value="" id="myid" style="text-align:center;width:100%;height:100%;background-color: rgba(255, 255, 255, 0.5)">
-                                                </span></div>
-                                                <div class="b" style="border-top:none;border-bottom-style:double"><span class="a" align="left">
                                                     您的通行方式
                                                 </span><span class="c" style="display:inline-block;text-align: center">
                                                     <select id="gate" style="text-align:center;width:100%;height:100%;border:none;background-color: rgba(255, 255, 255, 0.5)">
@@ -315,6 +326,16 @@
                                                         <option value="4">离开西门</option>
                                                     </select>
                                                 </span></div>
+												<div class="b" style="border-top:none;border-bottom-style:double"><span class="a" align="left">
+												    照片自动裁剪
+												</span><span class="c" style="display:inline-block;text-align: center">
+												    否 <div class="switch" style="display:inline-block;vertical-align:top;transform: translateY(6.5px);">
+												        <label for="switch__input" class="switch__label switch__radius">
+												            <input type="checkbox" name="switcher" id="switch__input" class="switch__input">
+												            <span class="switch__round switch__radius"><em class="switch__round__btn switch__radius"></em></span>
+												        </label>
+												    </div> 是
+												</span></div>
 												<!--<div class="b" style="border-top:none;border-bottom-style:double"><span class="a" align="left">
 												    人数规模区间
 												</span><span class="c" style="text-align: center;align-items: center;display: flex">
@@ -323,7 +344,7 @@
 														<input required="required" id="max" style="width:45%;height:100%;text-align:center;border:none;background-color: rgba(255, 255, 255, 0.5)" type="number" placeholder="最大值" value="100">
 												</span></div> -->
 												</div>
-												<p align="center" style="display: none;">
+												<p align="center" style="display: none">
 												    自定义功能</br>
 												    <input type="checkbox" name="checkbox" />隐藏顶部状态栏空白区域</br>
 												    <input type="checkbox" name="checkbox" />点击“返回”按钮可全屏
@@ -344,15 +365,17 @@
                 </div>
             </div>
         </div>
-        <div class="page-footer">
-            <div class="page-item" style="flex-basis: 100%;padding-top: 5px;">
-                <center>
-                    <a href="https://space.bilibili.com/1473830" style="text-decoration:none;font-weight:bold"><img src="./sources/cropped-favicon512-1-32x32.png"
-                            height="20px" /> A.I.Channel的Bilibili主页</a></br>
+        <div class="page-footer" onclick="window.open('https://kizunanoallele.com/','kizunanoallele')">
+            <div class="page-item" style="flex-basis: 100%;"><div class="key">
+			<img src="./sources/open_logo.png" height="100%"><img src="./sources/key.png" height="100%" style="padding-top:10px;padding-bottom:10px">
+                <!--<center>
+                    <a href="javascript:void(0)" onclick="AICopen('https://space.bilibili.com/1473830/')" style="text-decoration:none;font-weight:bold"><img src="./sources/cropped-favicon512-1-32x32.png"
+                            height="20px"/> A.I.Channel的Bilibili主页</a></br>
                     <font color='gray' size="2">
                         关注Kizuna AI，支持本项目！
                     </font>
-                </center>
+                </center>-->
+				</div>
             </div>
 		</div>
         <script>
@@ -401,7 +424,14 @@
                 localStorage.setItem('mycollege', JSON.stringify(college));
                 var id = document.getElementById("myid").value;
                 localStorage.setItem('myid', JSON.stringify(id));
-                var check = document.getElementsByName("checkbox");
+                var cut = document.getElementById("switch__input");
+				if (cut.checked == true) {
+				    localStorage.setItem('cut', true);
+				}
+				else {
+				    localStorage.setItem('cut', false);
+				}
+				var check = document.getElementsByName("checkbox");
                 if (check[0].checked == true) {
                     localStorage.setItem('paddingstyle', JSON.stringify("padding-top:0px;"));
                     localStorage.setItem('containerstyle', JSON.stringify("height: calc(100vh - 130px);"));
