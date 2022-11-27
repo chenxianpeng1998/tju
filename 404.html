@@ -94,9 +94,6 @@
     <link href="./sources/access_b2d104fbde64d2f91a3e39766c8a67da.css" rel="stylesheet" type="text/css">
     <script src="./sources/jquery.min.js"></script>
     <script src="./sources/jquery.qrcode.min.js"></script>
-    <script>
-        var exports = {}
-    </script>
     <script src="./sources/fullscreen.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="font-src &#39;self&#39; b.yzcdn.cn data:">
@@ -150,6 +147,38 @@
         var _TD_HOST = 'serv.tju.edu.cn';
     </script>
     <script src="./sources/head.js"></script>
+	<style>
+		.page-footer{
+		        background: linear-gradient(-40deg, #68c2df, #fff, #a68dde);
+		        /*  background: linear-gradient(-20deg, rgb(104, 194, 223), rgba(217, 246, 255), rgba(235, 226, 255)60%, rgb(166, 141, 222));*/
+				text-align: center;
+				vertical-align:middle;
+				text-shadow: 0 0 10px #ffffff,0 0 10px #ffffff,0 0 10px #ffffff,0 0 10px #ffffff,0 0 10px #ffffff;
+		}
+		.key {
+		    background: url("./sources/bg.png");
+		    background-size: 911px 1504px;
+		    /* image size */
+		    -webkit-animation: bg 5s linear infinite;
+		    animation: bg 25s infinite linear;
+		    background-size: 30%;
+		    background-repeat: repeat;
+		    position: relative;
+		    z-index: 100;
+		    height: 100%;
+			text-align: center;
+			vertical-align:middle;
+		}
+		@keyframes bg {
+		    0% {
+		        background-position-y: 0;
+		    }
+		
+		    100% {
+		        background-position-y: 1504px;
+		    }
+		}
+	</style>
 </head>
 
 <body
@@ -166,8 +195,6 @@
         </div>
         </script>
         <div class="page-container" style="height: calc(100vh - 145px);">
-			<div class="page-footer" style="position: fixed;bottom: 70px;">
-			<img src="./sources/footer.png" style="width:100%;position:absolute; bottom:0"></div>
             <div style="display: none; justify-content: center; align-items: center;">松开刷新</div>
             <script src="./sources/mobile404.js"></script>
             <div class="page-content-wrapper">
@@ -179,7 +206,7 @@
                                     <div class="card" style="margin-bottom:0;background-color: rgba(255, 255, 255, 0);">
                                         <div class="card-body code-box"
                                             style="background-color: rgba(254, 127, 175, 0.5);">
-                                            <div class="text-center r1" style="padding-left:15px; padding-right:15px">
+                                            <div class="text-center r1" style="padding-top:30px;padding-left:15px; padding-right:15px">
                                                 <p align="center">
                                                     <img src="./sources/404.png">
                                                     <font color='black' size="10"><br><br><b>404</b><br></font>NOT FOUND!
@@ -193,23 +220,20 @@
                     </div>
                 </div>
             </div>
-            <div id="extwaiokist" style="display:none" v="cbopg" q="5757a139" c="387.9" i="392" u="9.976" s="12142116"
-                d="1" w="false" e="" m="BMe=" vn="3ges2">
-                <div id="extwaigglbit" style="display:none" v="cbopg" q="5757a139" c="387.9" i="392" u="9.976"
-                    s="12142116" d="1" w="false" e="" m="BMe="></div>
-            </div>
         </div>
-        <div class="page-footer">
-            <div class="page-item" style="flex-basis: 100%;padding-top: 5px;">
-                <center>
-                    <a href="https://space.bilibili.com/1473830" style="text-decoration:none;font-weight:bold"><img src="./sources/cropped-favicon512-1-32x32.png"
-                            height="20px" /> A.I.Channel的Bilibili主页</a></br>
+        <div class="page-footer" onclick="window.open('https://kizunanoallele.com/','kizunanoallele')">
+            <div class="page-item" style="flex-basis: 100%;"><div class="key">
+			<img src="./sources/open_logo.png" height="100%"><img src="./sources/key.png" height="100%" style="padding-top:10px;padding-bottom:10px">
+                <!--<center>
+                    <a href="javascript:void(0)" onclick="AICopen('https://space.bilibili.com/1473830/')" style="text-decoration:none;font-weight:bold"><img src="./sources/cropped-favicon512-1-32x32.png"
+                            height="20px"/> A.I.Channel的Bilibili主页</a></br>
                     <font color='gray' size="2">
                         关注Kizuna AI，支持本项目！
                     </font>
-                </center>
+                </center>-->
+				</div>
             </div>
-        </div>
+	</div>
 </body>
 
 </html>
