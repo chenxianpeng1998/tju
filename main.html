@@ -59,7 +59,6 @@
     </script>
 	<link href="./sources/spec_20da.css" rel="stylesheet">
     <script src="./sources/head.js"></script>
-	<script type="text/javascript" src="./sources/codeback.js"></script>
     <style>
         .demo {
             padding: 10px;
@@ -376,7 +375,7 @@
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                 data-close-others="true">
                                 <img id="imghead" class="img-circle"
-                                    style="object-fit:cover;width:22.5px;border-radius:25%"
+                                    style="object-fit:cover;width:unset;border-radius:25%"
                                     data-savepage-currentsrc="http://serv.tju.edu.cn/user/headImg"
                                     data-savepage-src="../user/headImg"
                                     src="./sources/head.png">
@@ -978,6 +977,9 @@
         var containerstyle = JSON.parse(localStorage.getItem('containerstyle'));
         document.getElementById("exc2").innerHTML = "欢迎你, " + myname;
         var img = document.getElementById('imghead');
+		if (JSON.parse(localStorage.getItem('cut'))==true){
+			img.setAttribute('style', "object-fit:cover;width:21px;border-radius:25%");
+		}
         img.setAttribute('src', imgUrl);
         document.getElementById('exc4').setAttribute('style', paddingstyle);
         document.getElementById('exc5').setAttribute('style', containerstyle);
