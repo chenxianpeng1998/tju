@@ -79,9 +79,6 @@
     <link href="./sources/access_b2d104fbde64d2f91a3e39766c8a67da.css" rel="stylesheet" type="text/css">
     <script src="./sources/jquery.min.js"></script>
     <script src="./sources/jquery.qrcode.min.js"></script>
-    <script>
-        var exports = {}
-    </script>
     <script src="./sources/fullscreen.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="font-src &#39;self&#39; b.yzcdn.cn data:">
@@ -118,7 +115,7 @@
     <link href="./sources/responsive.css" rel="stylesheet" type="text/css">
     <link href="./sources/theme-color.css" rel="stylesheet" type="text/css">
     <!-- favicon -->
-    <link rel="shortcut icon" href="https://serv.tju.edu.cn/themes/default/assets/img/logo/logo_3.ico">
+    <link rel="shortcut icon" href="./sources/logo_3.ico">
     <!-- 新增提示信息组件 -->
     <link rel="stylesheet" href="./sources/jquery.toast.min.css">
     <!-- sweetalert -->
@@ -136,6 +133,7 @@
     </script>
 	<!--link href="./sources/spec_20da.css" rel="stylesheet"-->
     <script src="./sources/head.js"></script>
+	<script type="text/javascript" src="./sources/codeback.js"></script>
 </head>
 
 <body
@@ -383,9 +381,15 @@
                                         <div class="card-body code-box"
                                             style="background-color: rgba(126, 173, 117, 0.8);">
                                             <div class="text-center r1" style="padding-left:15px; padding-right:15px">
+												<div class="row">
+													<div class="col-12" style="padding-left:0px;padding-right:0px;padding-top: 10px;">
+														<div>
+															<span id="signal"></span>
+														</div>
+													</div>
+												</div>
                                                                                                     <div class="row">
                                                                                                       <div class="col-12" style="padding-left:0px;padding-right:0px;padding-top: 10px;">
-                                                                                                        <div style="padding-bottom:10px;"><span id="signal" style="height:80px;width:80px;font-size:50px;line-height:75px;border-radius: 80px;background-color: purple;color:white;display:inline-block;"></span></div>
                                                                                                         <div style="font-size:40px;display: inline-block;font-weight:bolder;line-height: 46px;overflow: visible;white-space: nowrap;text-align: center;" id="dateShow"></div>
                                                                                                       </div>
                                                                                                     </div>
@@ -420,7 +424,7 @@
                                     </div>
                                 </div>
                             </div>
-							<a class="btn btn-primary" style="width: 100%; border-radius: 30px;" id="btn_back">返回</a>
+							<a class="btn btn-primary" style="width: 100%; border-radius: 30px;" href="javascript:void(0)" id="btn_back" onclick="javascript:history.back(-1);">返回</a>
                         </div>
                     </div>
                 </div>
@@ -448,7 +452,7 @@
 			</a>
 		</div>
 		<div class="page-item page-center">
-			<a href="javascript:window.location.href = 'barcode.html'">
+			<a href="javascript:void(0)" onclick="openBarcodeCustom()">
 				<div class="page-cre">
 					<div class="page-item-fa">
 						<div class="img-box">
@@ -493,6 +497,41 @@
         </div>
     </div>
 
+
+<script>
+			function openBarcodeCustom() {
+				function plusReady(){
+				    createWithoutTitle('barcode.html', {
+				    	titleNView: {
+				    		type: 'float',
+				    		backgroundColor: '#00000000',
+				    		autoBackButton: false,
+				    		titleText: "",
+				    		buttons: [{
+				    			type: 'none',
+				    			text: "返回",
+				    			color: '#FFFFFF',
+				    			fontSize: '16px',
+				    			float: 'left',
+				    			width: 'auto',
+				    			colorPressed: '#FFFFFF',
+				    			onclick: "javascript:plus.webview.currentWebview().evalJS('ws.close();')" 
+				    		}
+				    		],
+				    	}
+				    });
+				}
+				if(window.plus){
+				    plusReady();
+				}else{
+				    document.addEventListener('plusready',plusReady,false);
+				}
+			}	
+	//扫描成功后回调
+	function scaned(){
+		window.location.href = "./pass.html";
+	}
+</script>
     <script type="text/javascript">
         /**
          * 二选一
@@ -688,16 +727,20 @@
             let curMillion = 0;
 			if (localStorage.getItem('whigate')=="east_enter"){
 				$mygate.html("<span style='color: blue;'>卫津路校区</span><span style='color: purple;'>东门</span>");
-				document.getElementById('signal').innerHTML='入';}
+				document.getElementById('signal').innerHTML='入';
+				document.getElementById('signal').setAttribute('style',"width: 80px;height: 80px;display: block;margin: 0 auto;font-size: 50px;border-radius: 100px;background: #0dc500;line-height: 74px;color: white;");}
 			else if (localStorage.getItem('whigate')=="east_leave"){
 				$mygate.html("<span style='color: blue;'>卫津路校区</span><span style='color: purple;'>东门</span>");
-				document.getElementById('signal').innerHTML='出';}
+				document.getElementById('signal').innerHTML='出';
+				document.getElementById('signal').setAttribute('style',"width: 80px;height: 80px;display: block;margin: 0 auto;font-size: 50px;border-radius: 100px;background: #800080;line-height: 74px;color: white;");}
 			else if (localStorage.getItem('whigate')=="west_enter"){
 				$mygate.html("<span style='color: blue;'>卫津路校区</span><span style='color: purple;'>西门</span>");
-				document.getElementById('signal').innerHTML='入';}
+				document.getElementById('signal').innerHTML='入';
+				document.getElementById('signal').setAttribute('style',"width: 80px;height: 80px;display: block;margin: 0 auto;font-size: 50px;border-radius: 100px;background: #0dc500;line-height: 74px;color: white;");}
 			else if (localStorage.getItem('whigate')=="west_leave"){
 				$mygate.html("<span style='color: blue;'>卫津路校区</span><span style='color: purple;'>西门</span>");
-				document.getElementById('signal').innerHTML='出';}
+				document.getElementById('signal').innerHTML='出';
+				document.getElementById('signal').setAttribute('style',"width: 80px;height: 80px;display: block;margin: 0 auto;font-size: 50px;border-radius: 100px;background: #800080;line-height: 74px;color: white;");}
             window.setInterval(function() {
                 currentTime += 100;
                 curTime.setTime(currentTime);
@@ -725,7 +768,7 @@
             }, 100);
         })
     </script>
-    <script>
+    <!--<script>
         var flag = JSON.parse(localStorage.getItem('flag'));
         if (flag == true) {
             document.getElementById('btn_back').addEventListener('click', ev => {
@@ -733,10 +776,10 @@
             });
         }
         else {
-            document.getElementById('btn_back').setAttribute('href', 'javascript:void(0)');
-            document.getElementById('btn_back').setAttribute('onclick', 'javascript:history.back(-1);');
+            var backhref = JSON.parse(localStorage.getItem('backhref'));
+            document.getElementById('btn_back').setAttribute('href', backhref);
         }
-    </script>
+    </script>-->
 
 </body>
 
